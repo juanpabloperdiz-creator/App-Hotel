@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" xmlns:fx="http://javafx.com/fxml" fx:controller="Controlador">
+    <padding>
+        <Insets top="32" right="16" bottom="16" left="16"/>
+    </padding>
+
+    <!-- Cabecera: título centrado -->
+    <StackPane>
+        <Label fx:id="lblHotel" text="HotelApp" StackPane.alignment="TOP_CENTER"
+               style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    </StackPane>
+
+    <ListView fx:id="tabla" prefHeight="340" fixedCellSize="100" VBox.vgrow="ALWAYS"/>
+
+    <!-- Buscador abajo a la izquierda -->
+    <HBox spacing="8" alignment="CENTER_LEFT">
+        <Label text="Nº de habitación:"/>
+        <TextField fx:id="txtNumero" promptText="Ej. 112" prefWidth="90" onAction="#buscar"/>
+        <Button text="Buscar" onAction="#buscar"/>
+        <Label fx:id="lblResultado" text="Introduce un número y pulsa Buscar."
+               style="-fx-padding: 0 0 0 12;"/>
+    </HBox>
+</VBox>
